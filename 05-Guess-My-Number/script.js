@@ -2,7 +2,7 @@
 
 // GAME OVERVIEW: Guess a number between 1-20, check to see whether you are too high/too low/correct
 
-// Helper Functions
+// SECTION: Helper Functions
 const createSecretNumber = function () {
   return Math.trunc(20 * Math.random()) + 1;
 };
@@ -11,11 +11,12 @@ const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
 
-// Define and Initialize Variables
+// SECTION: Define and Initialize Variables
 let secretNumber = createSecretNumber();
 let score = 20;
 let highscore = 0;
 
+// SECTION: Events and actions
 // use textContent for elements, value for stuff requiring inputs
 console.log(document.querySelector('.message').textContent);
 console.log(document.querySelector('.guess').value);
