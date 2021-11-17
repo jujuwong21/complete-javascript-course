@@ -242,6 +242,40 @@ restaurant.numGuests = 0;
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
 
+// SECTION: Logical Assignment Operators
+console.log('LOGICAL ASSIGNMENT OPERATORS');
+
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+  numWorkers: 0,
+};
+
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
+
+// set default value for number of guests
+// or assignment operator
+rest1.numGuests ||= 10;
+rest2.numGuests ||= 10;
+//rest1.numGuests = rest1.numGuests || 10;
+//rest2.numGuests = rest2.numGuests || 10;
+
+// logical nullish assignment operator
+// or assignment operator + nullish coalescing operator
+rest1.numWorkers ??= 10;
+rest2.numWorkers ??= 10;
+
+// and assignment operator
+rest1.owner &&= '<ANONYMOUS>';
+rest2.owner &&= '<ANONYMOUS>';
+//rest1.owner = rest1.owner && '<ANONYMOUS>'
+//rest2.owner = rest2.owner && '<ANONYMOUS>'
+console.log(rest1);
+console.log(rest2);
+
 // SECTION: Looping arrays: The for-of loop
 console.log('THE FOR-OF LOOP');
 // old way
